@@ -3,7 +3,6 @@ layout: post
 title:  "How I work"
 date:   2019-08-14 16:57:43 -0400
 categories: work productivity
-draft: true
 ---
 
 I'm always fascinated by looking at the tools that people use for their work, and how they design their working environments. From a technical perspective, it's neat to see the software that people choose, and why they choose it. However, while software is a large part of _how_ work is done, what I find interesting at the moment is the methodology that goes into getting things done. There's plenty of frameworks out there for organizing tasks, but none of them work for every person. Attaining productivity entails of either modifying these frameworks to fit, or designing your own.
