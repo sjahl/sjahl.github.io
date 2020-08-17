@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Deploying Ceph With Puppet | The Cardboard Box</title>
+<meta name="generator" content="Jekyll v4.1.1" />
+<meta property="og:title" content="Deploying Ceph With Puppet" />
+<meta name="author" content="Steve Jahl" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Following an epic saga of hardware procurement, and about a week of unstable power and networking at work, I managed to deploy a Ceph cluster this week. I did so using Puppet, and I figured I should write some of my process down, since the current information on the topic, is a bit light." />
+<meta property="og:description" content="Following an epic saga of hardware procurement, and about a week of unstable power and networking at work, I managed to deploy a Ceph cluster this week. I did so using Puppet, and I figured I should write some of my process down, since the current information on the topic, is a bit light." />
+<link rel="canonical" href="https://cardboardbox.xyz/2014/09/18/deploying-ceph-with-puppet.html" />
+<meta property="og:url" content="https://cardboardbox.xyz/2014/09/18/deploying-ceph-with-puppet.html" />
+<meta property="og:site_name" content="The Cardboard Box" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2014-09-18T08:30:00+00:00" />
+<script type="application/ld+json">
+{"mainEntityOfPage":{"@type":"WebPage","@id":"https://cardboardbox.xyz/2014/09/18/deploying-ceph-with-puppet.html"},"author":{"@type":"Person","name":"Steve Jahl"},"headline":"Deploying Ceph With Puppet","url":"https://cardboardbox.xyz/2014/09/18/deploying-ceph-with-puppet.html","description":"Following an epic saga of hardware procurement, and about a week of unstable power and networking at work, I managed to deploy a Ceph cluster this week. I did so using Puppet, and I figured I should write some of my process down, since the current information on the topic, is a bit light.","dateModified":"2014-09-18T08:30:00+00:00","datePublished":"2014-09-18T08:30:00+00:00","@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="https://cardboardbox.xyz/feed.xml" title="The Cardboard Box" /><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+</head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/">The Cardboard Box</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/about/">About</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Deploying Ceph With Puppet</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2014-09-18T08:30:00+00:00" itemprop="datePublished">Sep 18, 2014
+      </time></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>Following an epic saga of hardware procurement, and about a week of unstable power and <a href="http://blog.bimajority.org/2014/09/05/the-network-nightmare-that-ate-my-week/">networking at work</a>, I managed to deploy a Ceph cluster this week. I did so using Puppet, and I figured I should write some of my process down, since the <a href="http://wiki.ceph.com/Guides/General_Guides/Deploying_Ceph_with_Puppet">current information</a> on the topic, is a bit light.</p>
+
+<p>My setup includes:</p>
+
+<ul>
+  <li>Ubuntu 14.04LTS</li>
+  <li>Puppet 3.7 (+ hiera)</li>
+  <li>The <a href="https://github.com/stackforge/puppet-ceph">stackforge/puppet-ceph</a> module</li>
+  <li>Ceph .80.5</li>
+</ul>
+
+<p>To follow along, you’ll need a few things:</p>
+
+<ul>
+  <li>Hardware (or VMs) to install Ceph on</li>
+  <li>Familiarity with Puppet and Hiera</li>
+  <li>Familiarity with Ceph</li>
+</ul>
+
+<h2 id="puppet-modules">Puppet modules</h2>
+
+<p>I decided to go with the module on <a href="https://github.com/stackforge/puppet-ceph">stackforge</a>. The only other module that I could see real evidence of people using in production was the <a href="https://github.com/enovance/puppet-ceph">eNovance</a> one. Though, from what I could tell it wasn’t clear what the future of that module was, and it seemed like there was some agreement that development efforts would converge on the module on stackforge.</p>
+
+<p>I’m also somewhat of a fan of the Gerrit-based code review system in place for OpenStack, as it makes contributing to the modules fairly easy. Having the Ceph module hosted there means it can take advantage of that workflow. Worth noting, is that despite the module being hosted at stackforge, you can use it to deploy a Ceph cluster independently from an OpenStack cloud.</p>
+
+<h2 id="initial-setup">Initial setup</h2>
+
+<p>You’ll of course need to install the puppet-ceph module into your puppet modules tree. Also needed, will be a way to classify your nodes, such as with a puppet External Node Classifier (something like <a href="http://theforeman.org">Foreman</a>). Any way of getting puppet to associate roles with your nodes should do just fine.</p>
+
+<h3 id="hierarchy">Hierarchy</h3>
+
+<p>Imagine we have a (simple) hiera hierarchy:</p>
+
+<figure class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="s">:hierarchy:</span>
+<span class="pi">-</span> <span class="err">%</span><span class="pi">{</span><span class="nv">role</span><span class="pi">}</span>
+<span class="pi">-</span> <span class="err">%</span><span class="pi">{</span><span class="nv">cluster</span><span class="pi">}</span>
+<span class="pi">-</span> <span class="s">common</span></code></pre></figure>
+
+<p>In my case, nodes are assigned to a “ceph” cluster during installation, and I later assign them a specific role (ceph-mon or ceph-osd) when I’m ready to finish provisioning them. Nodes in the “ceph” cluster have the <code class="language-plaintext highlighter-rouge">ceph::profile::base</code> and <code class="language-plaintext highlighter-rouge">ceph::repo</code> classes assigned to them. The base profile and repo classes will configure the ceph package repository, and install ceph.</p>
+
+<p>In the hiera datadir, we’ll end up with three files:</p>
+
+<ul>
+  <li>ceph.yaml: Parameters that will apply cluster-wide</li>
+  <li>ceph-mon.yaml: Parameters for the ceph monitor role</li>
+  <li>ceph-osd.yaml: Parameters for the ceph OSD role</li>
+</ul>
+
+<h2 id="classes-and-variables">Classes and variables</h2>
+
+<p>There’s a few parameters that we’ll need to provide to the module. I’ll be using the <a href="https://github.com/stackforge/puppet-ceph/blob/master/examples/common.yaml">examples</a> from the module for these values.</p>
+
+<p><strong>ceph.yaml</strong></p>
+
+<p>You should generate the <code class="language-plaintext highlighter-rouge">fsid</code> for your cluster with the <code class="language-plaintext highlighter-rouge">uuidgen -r</code> command. The <code class="language-plaintext highlighter-rouge">mon_initial_members</code> should be the short hostnames of the hosts you intend to use as monitors. <code class="language-plaintext highlighter-rouge">mon_host</code> should be set to the IPs of those monitors, specifying port 6789. The values for various keys can be defined with the <code class="language-plaintext highlighter-rouge">ceph-authtool --gen-print-key</code> command. We need to define the keys in the common file, so that they can be defined on the clients that need them, as well as injected into the cluster keyring by the monitor.</p>
+
+<p>These should be defined in the hiera file applying to the “cluster”, ceph.yaml in our case:</p>
+
+<figure class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="s">ceph::profile::params:release: 'firefly'</span> <span class="c1"># the release you want to install</span>
+<span class="s">ceph::profile::params::fsid: '787b7f0f-3398-497a-bc9b-8fffb74f589e'</span>
+<span class="s">ceph::profile::params:authentication_type: 'cephx'</span>
+<span class="s">ceph::profile::params:mon_initial_members: 'first,second, third'</span>
+<span class="s">ceph::profile::params::mon_host: '10.11.12.2:6789, 10.11.12.3:6789, 10.11.12.4:6789'</span>
+<span class="s">ceph::profile::params::osd_pool_default_pg_num: '200'</span>
+<span class="s">ceph::profile::params::osd_pool_default_pgp_num: '200'</span>
+<span class="s">ceph::profile::params::osd_pool_default_size: '2'</span>
+<span class="s">ceph::profile::params::osd_pool_default_min_size: '1'</span>
+<span class="s">ceph::profile::params::cluster_network: '10.12.13.0/24'</span>
+<span class="s">ceph::profile::params::public_network: '10.11.12.0/24'</span>
+
+<span class="c1"># keys</span>
+<span class="s">ceph::profile::params::mon_key: 'AQATGHJTUCBqIBAA7M2yafV1xctn1pgr3GcKPg=='</span>
+<span class="s">ceph::profile::params::admin_key: 'AQBMGHJTkC8HKhAAJ7NH255wYypgm1oVuV41MA=='</span>
+<span class="s">ceph::profile::params::admin_key_mode: '0600'</span>
+<span class="s">ceph::profile::params::bootstrap_osd_key: 'AQARG3JTsDDEHhAAVinHPiqvJkUi5Mww/URupw=='</span>
+<span class="s">ceph::profile::params::bootstrap_mds_key: 'AQCztJdSyNb0NBAASA2yPZPuwXeIQnDJ9O8gVw=='</span></code></pre></figure>
+
+<p><strong>ceph-mon.yaml</strong></p>
+
+<p>Next, we need to define the settings for servers that will be given the ceph-mon “role”. There’s actually not much we need to put into this file at the moment since keys and ceph.conf contents are defined in <em>ceph.yaml</em>. Just make sure your monitor servers have the <code class="language-plaintext highlighter-rouge">ceph::profile::mon</code> class applied to them. We’ll return to this file later to add additional keys.</p>
+
+<p><strong>ceph-osd.yaml</strong></p>
+
+<p>Finally, a ceph-osd role needs to have the <code class="language-plaintext highlighter-rouge">ceph::profile::osd</code> class applied, and the OSD definitions themselves:</p>
+
+<figure class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="s">ceph::profile::params::osds:</span>
+  <span class="s">'/dev/sdc'</span><span class="pi">:</span>
+    <span class="na">journal</span><span class="pi">:</span> <span class="s1">'</span><span class="s">/dev/sdb1'</span>
+<span class="err">  </span><span class="s1">'</span><span class="s">/dev/sdd'</span><span class="pi">:</span>
+    <span class="na">journal</span><span class="pi">:</span> <span class="s1">'</span><span class="s">/dev/sdb2'</span></code></pre></figure>
+
+<p>The above will provision a server with two OSDs, and will place the journal on two different (raw) partitions of an external journal disk.</p>
+
+<h2 id="ordering">Ordering</h2>
+
+<p>I found that it worked best to install things in the following order:</p>
+
+<ol>
+  <li>Provision the servers, and apply the <code class="language-plaintext highlighter-rouge">ceph::profile::base</code> class to install Ceph and configure ceph.conf, etc.</li>
+  <li>Apply the ceph-mon role to the ceph monitors. While there were no OSDs in the cluster yet, I was able to log into the monitor nodes and test the <code class="language-plaintext highlighter-rouge">ceph status</code> command to ensure that I had a working monitor quorum, and that the monitor cephx keys were configured. Once the monitors are up, you can configure your CRUSH map (next step) before adding any OSDs.</li>
+  <li>Configure your CRUSH map. The default doesn’t include many failure domains past ‘host’ buckets – you’ll definitely want to plan your CRUSH hierarchy for a production cluster. More details on that over at the <a href="http://ceph.com/docs/master/rados/operations/crush-map">Ceph docs</a>.</li>
+  <li>Apply the ceph-osd role to OSD servers. Puppet will format the disks specified in your <code class="language-plaintext highlighter-rouge">ceph::profile::params::osds</code> variable, and will automatically add them to the CRUSH map.</li>
+</ol>
+
+<h3 id="osd-crush-location">OSD CRUSH location</h3>
+
+<p>Ceph provides a <a href="http://ceph.com/docs/master/rados/operations/crush-map/#crush-location">config option</a> for providing the CRUSH location of your OSDs. I found that it was a good idea to add this to the ceph.conf file before applying the ceph-osd role to my OSD nodes. The way the module is written, you can add values to ceph.conf on the host, and they won’t be overwritten. With that option set, Puppet will automatically add the OSD to the desired location in your CRUSH map.</p>
+
+<p>While doing this is manageable for a small cluster, it could be cumbersome if you’re deploying 10s of storage nodes. Ceph alternatively allows you to specify a “osd crush location hook”, which can be a custom script to specify the location string.</p>
+
+<p>I suppose it would be nice if the puppet module allowed you to specify the crush location as well (maybe a sysadmin familiar with Ceph and Puppet should submit a patch ;-) )</p>
+
+<h2 id="how-puppet-handles-osd-replacement">How Puppet handles OSD replacement</h2>
+
+<p>OSDs will eventually fail, and need to have their disk replaced. Luckily, Puppet can handle most of the dirty work for us! Simply replace the bad disk, and wait for puppet to provision it. However, there are some caveats with this.</p>
+
+<p>When an OSD fails and gets marked “down” and “out” from the cluster, the OSD still remains in the CRUSH map. If you simply replace the disk and have puppet add it to the cluster, it will generate a new OSD in the map. In a cluster with 150 OSDs, it will add a 151st OSD to your CRUSH map, and leave the old downed OSD in the map. You can either remove the downed OSD after the new one is in place, or, you can remove it before replacing the disk, and puppet will add it back to the cluster with the original OSD number of the failed disk. I’m sure this is mostly cosmetic, but if having broken sequences of numbers triggers your OCD, it’s something to think about.</p>
+
+<p>In any case, removing an OSD from the CRUSH map looks like the following (assuming osd.34 is the dead disk). You’ll need to run this on a host that has keys to the CRUSH map. Our monitors in this deployment have client.admin keys:</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="c"># make sure the OSD is out</span>
+ceph osd out osd.34
+<span class="c"># remove it from the map</span>
+ceph osd crush remove osd.34
+<span class="c"># delete it's authentication tokens</span>
+ceph auth del osd.34
+<span class="c"># finally, remove the OSD</span>
+ceph osd <span class="nb">rm </span>osd.34</code></pre></figure>
+
+<h2 id="a-few-notes-on-key-management">A few notes on key management</h2>
+
+<p>If you plan to use your Ceph cluster with something else (such as OpenStack) which will need keys in order to speak to rados, we can define those keys in hiera. The module includes a <code class="language-plaintext highlighter-rouge">ceph::keys</code> class which makes it fairly trivial to provide keys to clients, and can inject them into the cluster keyring.</p>
+
+<p>On the monitor host, we need to make sure the <code class="language-plaintext highlighter-rouge">ceph::keys</code> class is applied. We can provide a hash of keys to this class with the <code class="language-plaintext highlighter-rouge">args</code> variable, which looks like:</p>
+
+<figure class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="s">ceph::keys::args:</span>
+  <span class="s">client.app</span><span class="pi">:</span>
+    <span class="na">secret</span><span class="pi">:</span> <span class="s">(generate this as described above)</span>
+    <span class="na">cap_mon</span><span class="pi">:</span> <span class="s">allow r</span>
+    <span class="na">inject</span><span class="pi">:</span> <span class="no">true</span>
+    <span class="na">inject_as_id</span><span class="pi">:</span> <span class="s">mon.</span>
+    <span class="na">inject_keyring</span><span class="pi">:</span> <span class="s">/var/lib/ceph/mon/ceph-%{::hostname}/keyring</span></code></pre></figure>
+
+<p>That will create a client.app keyring, and inject it to the cluster keyring using the mon. id. Now, in a hiera role that applies to our client, we’ll need to apply the <code class="language-plaintext highlighter-rouge">ceph::profile::client</code> and <code class="language-plaintext highlighter-rouge">ceph::keys</code> classes to the client node:</p>
+
+<figure class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="s">ceph::keys::args:</span>
+  <span class="s">client.app</span><span class="pi">:</span>
+    <span class="na">secret</span><span class="pi">:</span> <span class="s">(use the same secret as defined on the monitor)</span>
+    <span class="na">cap_mon</span><span class="pi">:</span> <span class="s">allow r</span></code></pre></figure>
+
+<p>That will write the keyring file to the default location on the client (/etc/ceph/ceph.$key_name)</p>
+
+<p>Well, that’s all for now folks. I hope this provides a good enough overview of the puppet-ceph module to get you started on your production deployments! If you notice an error, or want to tell me that I’m wrong, get at me on <a href="https://twitter.com/roguetortoise">Twitter</a>.</p>
+
+
+  </div><a class="u-url" href="/2014/09/18/deploying-ceph-with-puppet.html" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">The Cardboard Box</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">Steve Jahl</li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/sjahl"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">sjahl</span></a></li><li><a href="https://www.twitter.com/stephenjahl"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">stephenjahl</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>All categories of thoughts from Steve.</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>

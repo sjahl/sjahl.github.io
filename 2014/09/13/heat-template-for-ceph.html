@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Heat Template For Testing Ceph | The Cardboard Box</title>
+<meta name="generator" content="Jekyll v4.1.1" />
+<meta property="og:title" content="Heat Template For Testing Ceph" />
+<meta name="author" content="Steve Jahl" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="I put together an OpenStack Heat template for bringing up a small 3-node cluster to test Ceph. Due to the lack of current Heat template documentation, I thought it’d be helpful to share, so you can find it in my github repo." />
+<meta property="og:description" content="I put together an OpenStack Heat template for bringing up a small 3-node cluster to test Ceph. Due to the lack of current Heat template documentation, I thought it’d be helpful to share, so you can find it in my github repo." />
+<link rel="canonical" href="https://cardboardbox.xyz/2014/09/13/heat-template-for-ceph.html" />
+<meta property="og:url" content="https://cardboardbox.xyz/2014/09/13/heat-template-for-ceph.html" />
+<meta property="og:site_name" content="The Cardboard Box" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2014-09-13T16:00:59+00:00" />
+<script type="application/ld+json">
+{"mainEntityOfPage":{"@type":"WebPage","@id":"https://cardboardbox.xyz/2014/09/13/heat-template-for-ceph.html"},"author":{"@type":"Person","name":"Steve Jahl"},"headline":"Heat Template For Testing Ceph","url":"https://cardboardbox.xyz/2014/09/13/heat-template-for-ceph.html","description":"I put together an OpenStack Heat template for bringing up a small 3-node cluster to test Ceph. Due to the lack of current Heat template documentation, I thought it’d be helpful to share, so you can find it in my github repo.","dateModified":"2014-09-13T16:00:59+00:00","datePublished":"2014-09-13T16:00:59+00:00","@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="https://cardboardbox.xyz/feed.xml" title="The Cardboard Box" /><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+</head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/">The Cardboard Box</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/about/">About</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Heat Template For Testing Ceph</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2014-09-13T16:00:59+00:00" itemprop="datePublished">Sep 13, 2014
+      </time></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>I put together an OpenStack <a href="https://wiki.openstack.org/wiki/Heat">Heat</a> template for bringing up a small 3-node cluster to test <a href="http://ceph.com">Ceph</a>. Due to the lack of current Heat template documentation, I thought it’d be helpful to share, so you can find it in my <a href="https://github.com/sjahl/heat-templates/blob/master/templates/ceph-test-cluster.yaml">github repo</a>.</p>
+
+<p>With this template, you get three instances with one block device attached to each, prime for installing a small Ceph cluster for testing. The heat template outputs return the IPs of the three instances. When launching the stack, you’ll need to provide a network UUID, the name (not UUID) of an image, and your nova keypair name. The rest of the options have defaults which you can leave, or set to the values of your choice. It’s worth noting that your keypair gets installed into the ec2_user’s home folder, rather than what you might be used to (I’m used to it being installed in the ‘ubuntu’ user’s home folder, as is usually the case in the Ubuntu cloudimg).</p>
+
+<p>I’ve tested this template with an Icehouse cloud running on a mix of Ubuntu precise and trusty compute hosts. Of course, you need Heat enabled on your cloud to use this.</p>
+
+<h3 id="a-few-tips-for-reading-the-template">A few tips for reading the template</h3>
+
+<p>There are three main sections to a heat template:</p>
+
+<ol>
+  <li>
+    <p>The <em>parameters</em> section is where required values are placed.</p>
+
+    <p>The items in this section are what appear on the “Launch Stack” interface when booting a stack in horizon. Values are either defined statically, or defaults can be given, which auto-fill in the web interface. An item without a value or default produces an empty form field in the horizon interface, and you (or the user) are required to fill the value.</p>
+  </li>
+  <li>
+    <p>The <em>resources</em> section defines the various OpenStack pieces that make up the stack.</p>
+
+    <p>In the case of this template, we are defining three instances, volumes, attachments, and neutron ports. We can retrieve values from the parameters with the <code class="language-plaintext highlighter-rouge">get_param</code> keyword. Other resources in this section can be referenced with the <code class="language-plaintext highlighter-rouge">get_resource</code> keyword. This is how I’ve associated volume attachments between their respective volumes and instances.</p>
+  </li>
+  <li>
+    <p>The <em>outputs</em> section is for retrieving values that are displayed once the stack has been created.</p>
+
+    <p>I’ve used this for retrieving the IPs of the instances that have been launched (see the <code class="language-plaintext highlighter-rouge">get_attr</code> keyword) so that I don’t have to go digging through the web interface for them – they’re all aggregated in the Stack Detail Overview in horizon for easy viewing.</p>
+  </li>
+</ol>
+
+<p>That’s all for now. Feel free to tell me that I’ve done it all wrong… or submit a pull request or something.</p>
+
+
+  </div><a class="u-url" href="/2014/09/13/heat-template-for-ceph.html" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">The Cardboard Box</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">Steve Jahl</li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/sjahl"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">sjahl</span></a></li><li><a href="https://www.twitter.com/stephenjahl"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">stephenjahl</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>All categories of thoughts from Steve.</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>

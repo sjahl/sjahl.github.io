@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="https://cardboardbox.xyz/feed.xml" rel="self" type="application/atom+xml" /><link href="https://cardboardbox.xyz/" rel="alternate" type="text/html" /><updated>2020-08-17T20:05:51+00:00</updated><id>https://cardboardbox.xyz/feed.xml</id><title type="html">The Cardboard Box</title><subtitle>All categories of thoughts from Steve.</subtitle><author><name>Steve Jahl</name></author><entry><title type="html">Dumbing Down my Phone</title><link href="https://cardboardbox.xyz/productivity/2019/09/05/dumbing-down-my-phone.html" rel="alternate" type="text/html" title="Dumbing Down my Phone" /><published>2019-09-05T20:57:43+00:00</published><updated>2019-09-05T20:57:43+00:00</updated><id>https://cardboardbox.xyz/productivity/2019/09/05/dumbing-down-my-phone</id><content type="html" xml:base="https://cardboardbox.xyz/productivity/2019/09/05/dumbing-down-my-phone.html">&lt;p&gt;I’ve gotten really annoyed by my phone. Lately it seems like I’ve been pulling it out of my pocket for no reason other than to look at it. This doesn’t feel good.&lt;/p&gt;
+
+&lt;p&gt;In the past, I’ve tried to limit my attachment to my phone by removing apps that are time wasters (hi, reddit). This has mostly proved ineffective, since I tend to just use the browser to access the same time wasting content. I found that I’ve had trouble staying focused when there’s such an easy escape to procrastination by my side at all times. There’s better things to do with my time than to stare at a luminous brick, so I’ve made some changes to my phone.&lt;/p&gt;
+
+&lt;p&gt;Now, I do believe that there are some redeeming qualities of a cell phone. Those main qualities are: Communication (calls and text messaging), Calendaring, Notes, Navigation, and Payment. Outside of these things, I’ve decided that there isn’t much else my phone does that’s valuable enough to warrant having it available in my pocket at all times. I’ve deleted everything from my phone that’s related to accessing social feeds and news sites, as well as shopping apps. These types of activities are ones that I find the most distracting, and create the largest pull to opening my phone. In reality, very little of my life depends on being able to look at this stuff at any given moment – they’ve become activities that I do for the sake of doing them. So, they’re gone.&lt;/p&gt;
+
+&lt;p&gt;You’ll notice that I haven’t included email in the list of qualities that my phone should have. I’m currently privileged in that I don’t work for an employer that 1) treats email like a time critical communication medium, and 2) expects me to respond to email at times when I am not sitting in front of an actual computer. I will concede that not everyone has these luxuries, and that I am quite lucky. With these facts in mind, I realized that there are exactly zero cases where I need my email “on the go”. It’s another thing that just causes stress by existing and being easily accessible. Just having it on my phone makes it seem more urgent and important than it actually is. So, I’m going to try not using my phone for email at all, and will keep you updated on how this goes in the long term. Some instruction to friends and colleagues is required here, to inform them to use different means to contact me when something is urgent.&lt;/p&gt;
+
+&lt;p&gt;Once all the social feeds and things that I need to check for the sake of checking them are gone, the last major hurdle for me is the web browser. I do feel some slight utility in being able to google search things quickly while I’m out and about. To allow for this, I’ve configured my phone to allow me to use the browser for ten minutes a day. I’m hopeful that this will make the browser useful, while not allowing for it to be a tool that I use to fall down productivity rabbit holes…&lt;/p&gt;
+
+&lt;p&gt;The result that I’m left with now is that my phone is a tool that does useful things for me. I can communicate with other people, keep track of my schedule, and keep quick notes, and that’s all that I feel like my phone needs to do. This strikes me as the first time in years that my phone is a productive tool rather than an entertainment device. I’m looking forward to how this experiment goes, and will post an update when I feel like I can articulate some measurable changes.&lt;/p&gt;</content><author><name>Steve Jahl</name></author><category term="productivity" /><summary type="html">I’ve gotten really annoyed by my phone. Lately it seems like I’ve been pulling it out of my pocket for no reason other than to look at it. This doesn’t feel good.</summary></entry><entry><title type="html">How I work</title><link href="https://cardboardbox.xyz/work/productivity/2019/08/14/how-i-work.html" rel="alternate" type="text/html" title="How I work" /><published>2019-08-14T20:57:43+00:00</published><updated>2019-08-14T20:57:43+00:00</updated><id>https://cardboardbox.xyz/work/productivity/2019/08/14/how-i-work</id><content type="html" xml:base="https://cardboardbox.xyz/work/productivity/2019/08/14/how-i-work.html">&lt;p&gt;I’m always fascinated by looking at the tools that people use for their work, and how they design their working environments. From a technical perspective, it’s neat to see the software that people choose, and why they choose it. However, while software is a large part of &lt;em&gt;how&lt;/em&gt; work is done, what I find interesting at the moment is the methodology that goes into getting things done. There’s plenty of frameworks out there for organizing tasks, but none of them work for every person. Attaining productivity entails of either modifying these frameworks to fit, or designing your own.&lt;/p&gt;
+
+&lt;p&gt;I thought it’d be beneficial here to describe how I approach my work day, and how I keep track of what needs to get done. As I’m a programmer myself, this will be focused on a software development work day.&lt;/p&gt;
+
+&lt;p&gt;The major component of tracking my time and work is a development journal. I use a simple, old-fashioned notebook. After trying many different software programs that implement different versions of the Getting Things Done framework, I found a paper notebook to be most effective. The paper notebook works for me, because:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;I no longer have to worry about syncing across devices&lt;/li&gt;
+  &lt;li&gt;I no longer have to worry about cross-platform app availability&lt;/li&gt;
+  &lt;li&gt;I am less distracted by the Internet and remember more of my tasks when I physically write things down&lt;/li&gt;
+  &lt;li&gt;My notebook does not have a hard drive that can fail, or a battery that runs out&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;A good task tracking system is extremely valuable. I believe that software developers need a system in place where they can write down thoughts and TODO items without much interference. I often think of things when I’m in the middle of working on something, and being able to efficiently clear those things out of my mind is essential to keeping my focus. I’ve found that a physical notebook handles this nicely.&lt;/p&gt;
+
+&lt;p&gt;The format that I use for taking notes is based on &lt;a href=&quot;https://bulletjournal.com&quot;&gt;Bullet Journal&lt;/a&gt;. The indexing and note taking rules bring some of the convenience of software systems, and put them in my notebook. If I need it to do something custom, I can just draw it out with my pen. No waiting for new software features!&lt;/p&gt;
+
+&lt;h2 id=&quot;starting&quot;&gt;Starting&lt;/h2&gt;
+
+&lt;p&gt;Beginning my work day is historically what I’ve found the most difficult. The act of choosing something to start on and just doing it is where I easily find myself lost. I’m extremely jealous of people that seem to show up at work, sit down at their desk, and start coding. For me, that motivation doesn’t come that easily.&lt;/p&gt;
+
+&lt;p&gt;Forming a routine has been the most helpful technique. The routine kind of has a way of priming my brain and attitude for work. Starting the same way each day removes some of the decision paralysis that comes with trying to choose what to work on.&lt;/p&gt;
+
+&lt;p&gt;I start each day by reviewing my development journal. I note any tasks that must be done today, remove any tasks that are no longer needed, and add any new tasks that come to mind. This review process helps me plot out my work for the day, and leaves me with a list of work to choose from.&lt;/p&gt;
+
+&lt;p&gt;Sometimes, even after I have a list of work to do, I still have trouble actually &lt;em&gt;starting&lt;/em&gt;. Throughout my career, I’ve fought with burnout, lack of a clear direction from management, or have just been simply uninterested in what I’m working on. Most of these types of problems make any task in my project seem like an impassable object (&lt;em&gt;I’m afraid of opening my text editor for fear of what it might bring&lt;/em&gt;). The good news is that these tasks are rarely insurmountable, and I’ve found the following techniques helpful when I have trouble picking up the first task.&lt;/p&gt;
+
+&lt;h4 id=&quot;leave-a-failing-unit-test-the-day-before&quot;&gt;Leave a failing unit test the day before&lt;/h4&gt;
+
+&lt;p&gt;Towards the end of my work day, if I have the chance to leave a failing test case open, I do it. I think this does two things: 1) it helps instill a healthy attitude around not working long hours until absolutely everything is finished, and 2) I find it very easy to snap back into the swing of things when I have a test telling me exactly what to go work on. This technique helps establish a good flow, as when I navigate to that failing test case, it makes me feel like I’m picking up right where I left off.&lt;/p&gt;
+
+&lt;h4 id=&quot;organize-development-work-into-categories-and-dont-context-switch&quot;&gt;Organize development work into categories and don’t context switch&lt;/h4&gt;
+
+&lt;p&gt;I work on all parts of my application stack, from operating the servers, to the javascript running in my end-users browsers. While this sounds like a lot, the work can easily be divided up into a few categories. To prevent context-switching costs, I try to pick one of the categories to work on during a given day, and stick with it. For example, I’ll designate Tuesday as a “front-end design day”, and I’ll focus on HTML and CSS. I’m much more productive at this when I’m not worrying about how much RAM my database server has.&lt;/p&gt;
+
+&lt;p&gt;This separation of topics also has the nice effect of changing up the work that I’m doing, which is helpful in reducing the feeling of monotony. I also find it beneficial, as I have conceptual “buckets” to place tasks into in the future. If I notice a CSS problem while I’m developing the back-end, I can note the problem to be taken care of the next time I’m working on the front-end, and then&lt;/p&gt;
+
+&lt;h2 id=&quot;working&quot;&gt;Working&lt;/h2&gt;
+
+&lt;p&gt;After I’ve gotten started, maintaining momentum is my primary focus. As I’m working, I’m typically faced with all forms of interruptions. Keeping my momentum involves careful management of distractions, and taking notes on things that I need to follow up on later.&lt;/p&gt;
+
+&lt;p&gt;External distractions generally come in the form of meetings, email, and chat messages. For meetings, I make sure that the time is noted during my start-of-day notebook review. This allows me to plan to work on tasks that can be completed in the chunks of time that I have before and after the meeting. Email and Chat are silenced while I’m focusing on a task. Instead, I check these at certain intervals (typically hourly).&lt;/p&gt;
+
+&lt;p&gt;Internal distractions are the self-inflicted ones. These include the desire to look at Twitter, picking which song to listen to on my headphones, or trying to fix unrelated bugs as I come across them. I find that by isolating my editor and terminals in their own workspace away from other software, I can limit some of the temptation to stray. I also find that listening to &lt;a href=&quot;https://noisli.com&quot;&gt;white noise&lt;/a&gt; removes some of the distractions of music services. While I’m working, there’s typically a constant stream of thoughts (feature ideas, bugs, and other code changes). While it’s good to have these thoughts, if they’re unrelated to my current task, I write them down in my notebook to push them out of my mind and continue with what I was working on.&lt;/p&gt;
+
+&lt;p&gt;I’ll generally iterate through my tasks on this fashion until they’re complete. If I find myself with spare time, I’ll generally do research, catch up on reading blogs, or I’ll try to learn something new about something I’m currently working on (new framework features, language libraries, etc). Gaps like this are also s great time to tackle smaller software maintenance tasks.&lt;/p&gt;
+
+&lt;h2 id=&quot;ending&quot;&gt;Ending&lt;/h2&gt;
+
+&lt;p&gt;Ending the day is, in my opinion, the most important part. I try to keep a consistent time of day to stop working. This consistency helps me plan more efficiently, and helps keep me from getting lost in my tasks (“Oh no! I’ve been working for 13 hours!”). Often, I’ll set an alarm on my computer for about twenty minutes before I intend to leave work for the day.&lt;/p&gt;
+
+&lt;p&gt;When the alarm goes off, I wrap up what I’m working on (or leave it in an otherwise resumable state for the next day), and review my notebook. The end-of-day review is quite similar to the start-of-day review. The goals are to:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Cancel any tasks that are no longer pertinent&lt;/li&gt;
+  &lt;li&gt;Designate tasks for tomorrow or someday later in the future&lt;/li&gt;
+  &lt;li&gt;Make any notes that will help me pick up work on the next day&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Once the review is done, it’s time to hang up. I generally try to completely disconnect from work for at least an hour after I leave. I avoid looking at work email or chat on the commute home. I avoid working after hours if at all possible. I’ve generally found that if I spend the evening reading, listening to podcasts, watching a TV show, and then getting a full nights sleep, I’m far more ready for work when I arrive the next day. Relax and recharge.&lt;/p&gt;
+
+&lt;p&gt;That’s all for now. I’m hoping that this inspires some others to share how they make themselves productive. The personal tweaks that people make to productivity frameworks have always interested me, so I’d love to hear about them from others!&lt;/p&gt;</content><author><name>Steve Jahl</name></author><category term="work" /><category term="productivity" /><summary type="html">I’m always fascinated by looking at the tools that people use for their work, and how they design their working environments. From a technical perspective, it’s neat to see the software that people choose, and why they choose it. However, while software is a large part of how work is done, what I find interesting at the moment is the methodology that goes into getting things done. There’s plenty of frameworks out there for organizing tasks, but none of them work for every person. Attaining productivity entails of either modifying these frameworks to fit, or designing your own.</summary></entry><entry><title type="html">Deploying Ceph With Puppet</title><link href="https://cardboardbox.xyz/2014/09/18/deploying-ceph-with-puppet.html" rel="alternate" type="text/html" title="Deploying Ceph With Puppet" /><published>2014-09-18T08:30:00+00:00</published><updated>2014-09-18T08:30:00+00:00</updated><id>https://cardboardbox.xyz/2014/09/18/deploying-ceph-with-puppet</id><content type="html" xml:base="https://cardboardbox.xyz/2014/09/18/deploying-ceph-with-puppet.html">&lt;p&gt;Following an epic saga of hardware procurement, and about a week of unstable power and &lt;a href=&quot;http://blog.bimajority.org/2014/09/05/the-network-nightmare-that-ate-my-week/&quot;&gt;networking at work&lt;/a&gt;, I managed to deploy a Ceph cluster this week. I did so using Puppet, and I figured I should write some of my process down, since the &lt;a href=&quot;http://wiki.ceph.com/Guides/General_Guides/Deploying_Ceph_with_Puppet&quot;&gt;current information&lt;/a&gt; on the topic, is a bit light.&lt;/p&gt;
+
+&lt;p&gt;My setup includes:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Ubuntu 14.04LTS&lt;/li&gt;
+  &lt;li&gt;Puppet 3.7 (+ hiera)&lt;/li&gt;
+  &lt;li&gt;The &lt;a href=&quot;https://github.com/stackforge/puppet-ceph&quot;&gt;stackforge/puppet-ceph&lt;/a&gt; module&lt;/li&gt;
+  &lt;li&gt;Ceph .80.5&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;To follow along, you’ll need a few things:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Hardware (or VMs) to install Ceph on&lt;/li&gt;
+  &lt;li&gt;Familiarity with Puppet and Hiera&lt;/li&gt;
+  &lt;li&gt;Familiarity with Ceph&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;puppet-modules&quot;&gt;Puppet modules&lt;/h2&gt;
+
+&lt;p&gt;I decided to go with the module on &lt;a href=&quot;https://github.com/stackforge/puppet-ceph&quot;&gt;stackforge&lt;/a&gt;. The only other module that I could see real evidence of people using in production was the &lt;a href=&quot;https://github.com/enovance/puppet-ceph&quot;&gt;eNovance&lt;/a&gt; one. Though, from what I could tell it wasn’t clear what the future of that module was, and it seemed like there was some agreement that development efforts would converge on the module on stackforge.&lt;/p&gt;
+
+&lt;p&gt;I’m also somewhat of a fan of the Gerrit-based code review system in place for OpenStack, as it makes contributing to the modules fairly easy. Having the Ceph module hosted there means it can take advantage of that workflow. Worth noting, is that despite the module being hosted at stackforge, you can use it to deploy a Ceph cluster independently from an OpenStack cloud.&lt;/p&gt;
+
+&lt;h2 id=&quot;initial-setup&quot;&gt;Initial setup&lt;/h2&gt;
+
+&lt;p&gt;You’ll of course need to install the puppet-ceph module into your puppet modules tree. Also needed, will be a way to classify your nodes, such as with a puppet External Node Classifier (something like &lt;a href=&quot;http://theforeman.org&quot;&gt;Foreman&lt;/a&gt;). Any way of getting puppet to associate roles with your nodes should do just fine.&lt;/p&gt;
+
+&lt;h3 id=&quot;hierarchy&quot;&gt;Hierarchy&lt;/h3&gt;
+
+&lt;p&gt;Imagine we have a (simple) hiera hierarchy:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-yaml&quot; data-lang=&quot;yaml&quot;&gt;&lt;span class=&quot;s&quot;&gt;:hierarchy:&lt;/span&gt;
+&lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;role&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;cluster&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;common&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;In my case, nodes are assigned to a “ceph” cluster during installation, and I later assign them a specific role (ceph-mon or ceph-osd) when I’m ready to finish provisioning them. Nodes in the “ceph” cluster have the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ceph::profile::base&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ceph::repo&lt;/code&gt; classes assigned to them. The base profile and repo classes will configure the ceph package repository, and install ceph.&lt;/p&gt;
+
+&lt;p&gt;In the hiera datadir, we’ll end up with three files:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;ceph.yaml: Parameters that will apply cluster-wide&lt;/li&gt;
+  &lt;li&gt;ceph-mon.yaml: Parameters for the ceph monitor role&lt;/li&gt;
+  &lt;li&gt;ceph-osd.yaml: Parameters for the ceph OSD role&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;classes-and-variables&quot;&gt;Classes and variables&lt;/h2&gt;
+
+&lt;p&gt;There’s a few parameters that we’ll need to provide to the module. I’ll be using the &lt;a href=&quot;https://github.com/stackforge/puppet-ceph/blob/master/examples/common.yaml&quot;&gt;examples&lt;/a&gt; from the module for these values.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;ceph.yaml&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;You should generate the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;fsid&lt;/code&gt; for your cluster with the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;uuidgen -r&lt;/code&gt; command. The &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;mon_initial_members&lt;/code&gt; should be the short hostnames of the hosts you intend to use as monitors. &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;mon_host&lt;/code&gt; should be set to the IPs of those monitors, specifying port 6789. The values for various keys can be defined with the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ceph-authtool --gen-print-key&lt;/code&gt; command. We need to define the keys in the common file, so that they can be defined on the clients that need them, as well as injected into the cluster keyring by the monitor.&lt;/p&gt;
+
+&lt;p&gt;These should be defined in the hiera file applying to the “cluster”, ceph.yaml in our case:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-yaml&quot; data-lang=&quot;yaml&quot;&gt;&lt;span class=&quot;s&quot;&gt;ceph::profile::params:release: 'firefly'&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# the release you want to install&lt;/span&gt;
+&lt;span class=&quot;s&quot;&gt;ceph::profile::params::fsid: '787b7f0f-3398-497a-bc9b-8fffb74f589e'&lt;/span&gt;
+&lt;span class=&quot;s&quot;&gt;ceph::profile::params:authentication_type: 'cephx'&lt;/span&gt;
+&lt;span class=&quot;s&quot;&gt;ceph::profile::params:mon_initial_members: 'first,second, third'&lt;/span&gt;
+&lt;span class=&quot;s&quot;&gt;ceph::profile::params::mon_host: '10.11.12.2:6789, 10.11.12.3:6789, 10.11.12.4:6789'&lt;/span&gt;
+&lt;span class=&quot;s&quot;&gt;ceph::profile::params::osd_pool_default_pg_num: '200'&lt;/span&gt;
+&lt;span class=&quot;s&quot;&gt;ceph::profile::params::osd_pool_default_pgp_num: '200'&lt;/span&gt;
+&lt;span class=&quot;s&quot;&gt;ceph::profile::params::osd_pool_default_size: '2'&lt;/span&gt;
+&lt;span class=&quot;s&quot;&gt;ceph::profile::params::osd_pool_default_min_size: '1'&lt;/span&gt;
+&lt;span class=&quot;s&quot;&gt;ceph::profile::params::cluster_network: '10.12.13.0/24'&lt;/span&gt;
+&lt;span class=&quot;s&quot;&gt;ceph::profile::params::public_network: '10.11.12.0/24'&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;# keys&lt;/span&gt;
+&lt;span class=&quot;s&quot;&gt;ceph::profile::params::mon_key: 'AQATGHJTUCBqIBAA7M2yafV1xctn1pgr3GcKPg=='&lt;/span&gt;
+&lt;span class=&quot;s&quot;&gt;ceph::profile::params::admin_key: 'AQBMGHJTkC8HKhAAJ7NH255wYypgm1oVuV41MA=='&lt;/span&gt;
+&lt;span class=&quot;s&quot;&gt;ceph::profile::params::admin_key_mode: '0600'&lt;/span&gt;
+&lt;span class=&quot;s&quot;&gt;ceph::profile::params::bootstrap_osd_key: 'AQARG3JTsDDEHhAAVinHPiqvJkUi5Mww/URupw=='&lt;/span&gt;
+&lt;span class=&quot;s&quot;&gt;ceph::profile::params::bootstrap_mds_key: 'AQCztJdSyNb0NBAASA2yPZPuwXeIQnDJ9O8gVw=='&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;&lt;strong&gt;ceph-mon.yaml&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Next, we need to define the settings for servers that will be given the ceph-mon “role”. There’s actually not much we need to put into this file at the moment since keys and ceph.conf contents are defined in &lt;em&gt;ceph.yaml&lt;/em&gt;. Just make sure your monitor servers have the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ceph::profile::mon&lt;/code&gt; class applied to them. We’ll return to this file later to add additional keys.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;ceph-osd.yaml&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Finally, a ceph-osd role needs to have the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ceph::profile::osd&lt;/code&gt; class applied, and the OSD definitions themselves:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-yaml&quot; data-lang=&quot;yaml&quot;&gt;&lt;span class=&quot;s&quot;&gt;ceph::profile::params::osds:&lt;/span&gt;
+  &lt;span class=&quot;s&quot;&gt;'/dev/sdc'&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;journal&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;/dev/sdb1'&lt;/span&gt;
+&lt;span class=&quot;err&quot;&gt;  &lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;/dev/sdd'&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;journal&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;/dev/sdb2'&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;The above will provision a server with two OSDs, and will place the journal on two different (raw) partitions of an external journal disk.&lt;/p&gt;
+
+&lt;h2 id=&quot;ordering&quot;&gt;Ordering&lt;/h2&gt;
+
+&lt;p&gt;I found that it worked best to install things in the following order:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Provision the servers, and apply the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ceph::profile::base&lt;/code&gt; class to install Ceph and configure ceph.conf, etc.&lt;/li&gt;
+  &lt;li&gt;Apply the ceph-mon role to the ceph monitors. While there were no OSDs in the cluster yet, I was able to log into the monitor nodes and test the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ceph status&lt;/code&gt; command to ensure that I had a working monitor quorum, and that the monitor cephx keys were configured. Once the monitors are up, you can configure your CRUSH map (next step) before adding any OSDs.&lt;/li&gt;
+  &lt;li&gt;Configure your CRUSH map. The default doesn’t include many failure domains past ‘host’ buckets – you’ll definitely want to plan your CRUSH hierarchy for a production cluster. More details on that over at the &lt;a href=&quot;http://ceph.com/docs/master/rados/operations/crush-map&quot;&gt;Ceph docs&lt;/a&gt;.&lt;/li&gt;
+  &lt;li&gt;Apply the ceph-osd role to OSD servers. Puppet will format the disks specified in your &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ceph::profile::params::osds&lt;/code&gt; variable, and will automatically add them to the CRUSH map.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&quot;osd-crush-location&quot;&gt;OSD CRUSH location&lt;/h3&gt;
+
+&lt;p&gt;Ceph provides a &lt;a href=&quot;http://ceph.com/docs/master/rados/operations/crush-map/#crush-location&quot;&gt;config option&lt;/a&gt; for providing the CRUSH location of your OSDs. I found that it was a good idea to add this to the ceph.conf file before applying the ceph-osd role to my OSD nodes. The way the module is written, you can add values to ceph.conf on the host, and they won’t be overwritten. With that option set, Puppet will automatically add the OSD to the desired location in your CRUSH map.&lt;/p&gt;
+
+&lt;p&gt;While doing this is manageable for a small cluster, it could be cumbersome if you’re deploying 10s of storage nodes. Ceph alternatively allows you to specify a “osd crush location hook”, which can be a custom script to specify the location string.&lt;/p&gt;
+
+&lt;p&gt;I suppose it would be nice if the puppet module allowed you to specify the crush location as well (maybe a sysadmin familiar with Ceph and Puppet should submit a patch ;-) )&lt;/p&gt;
+
+&lt;h2 id=&quot;how-puppet-handles-osd-replacement&quot;&gt;How Puppet handles OSD replacement&lt;/h2&gt;
+
+&lt;p&gt;OSDs will eventually fail, and need to have their disk replaced. Luckily, Puppet can handle most of the dirty work for us! Simply replace the bad disk, and wait for puppet to provision it. However, there are some caveats with this.&lt;/p&gt;
+
+&lt;p&gt;When an OSD fails and gets marked “down” and “out” from the cluster, the OSD still remains in the CRUSH map. If you simply replace the disk and have puppet add it to the cluster, it will generate a new OSD in the map. In a cluster with 150 OSDs, it will add a 151st OSD to your CRUSH map, and leave the old downed OSD in the map. You can either remove the downed OSD after the new one is in place, or, you can remove it before replacing the disk, and puppet will add it back to the cluster with the original OSD number of the failed disk. I’m sure this is mostly cosmetic, but if having broken sequences of numbers triggers your OCD, it’s something to think about.&lt;/p&gt;
+
+&lt;p&gt;In any case, removing an OSD from the CRUSH map looks like the following (assuming osd.34 is the dead disk). You’ll need to run this on a host that has keys to the CRUSH map. Our monitors in this deployment have client.admin keys:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;c&quot;&gt;# make sure the OSD is out&lt;/span&gt;
+ceph osd out osd.34
+&lt;span class=&quot;c&quot;&gt;# remove it from the map&lt;/span&gt;
+ceph osd crush remove osd.34
+&lt;span class=&quot;c&quot;&gt;# delete it's authentication tokens&lt;/span&gt;
+ceph auth del osd.34
+&lt;span class=&quot;c&quot;&gt;# finally, remove the OSD&lt;/span&gt;
+ceph osd &lt;span class=&quot;nb&quot;&gt;rm &lt;/span&gt;osd.34&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;h2 id=&quot;a-few-notes-on-key-management&quot;&gt;A few notes on key management&lt;/h2&gt;
+
+&lt;p&gt;If you plan to use your Ceph cluster with something else (such as OpenStack) which will need keys in order to speak to rados, we can define those keys in hiera. The module includes a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ceph::keys&lt;/code&gt; class which makes it fairly trivial to provide keys to clients, and can inject them into the cluster keyring.&lt;/p&gt;
+
+&lt;p&gt;On the monitor host, we need to make sure the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ceph::keys&lt;/code&gt; class is applied. We can provide a hash of keys to this class with the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;args&lt;/code&gt; variable, which looks like:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-yaml&quot; data-lang=&quot;yaml&quot;&gt;&lt;span class=&quot;s&quot;&gt;ceph::keys::args:&lt;/span&gt;
+  &lt;span class=&quot;s&quot;&gt;client.app&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;secret&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;(generate this as described above)&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;cap_mon&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;allow r&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;inject&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;true&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;inject_as_id&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;mon.&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;inject_keyring&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;/var/lib/ceph/mon/ceph-%{::hostname}/keyring&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;That will create a client.app keyring, and inject it to the cluster keyring using the mon. id. Now, in a hiera role that applies to our client, we’ll need to apply the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ceph::profile::client&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ceph::keys&lt;/code&gt; classes to the client node:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-yaml&quot; data-lang=&quot;yaml&quot;&gt;&lt;span class=&quot;s&quot;&gt;ceph::keys::args:&lt;/span&gt;
+  &lt;span class=&quot;s&quot;&gt;client.app&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;secret&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;(use the same secret as defined on the monitor)&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;cap_mon&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;allow r&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;That will write the keyring file to the default location on the client (/etc/ceph/ceph.$key_name)&lt;/p&gt;
+
+&lt;p&gt;Well, that’s all for now folks. I hope this provides a good enough overview of the puppet-ceph module to get you started on your production deployments! If you notice an error, or want to tell me that I’m wrong, get at me on &lt;a href=&quot;https://twitter.com/roguetortoise&quot;&gt;Twitter&lt;/a&gt;.&lt;/p&gt;</content><author><name>Steve Jahl</name></author><summary type="html">Following an epic saga of hardware procurement, and about a week of unstable power and networking at work, I managed to deploy a Ceph cluster this week. I did so using Puppet, and I figured I should write some of my process down, since the current information on the topic, is a bit light.</summary></entry><entry><title type="html">Heat Template For Testing Ceph</title><link href="https://cardboardbox.xyz/2014/09/13/heat-template-for-ceph.html" rel="alternate" type="text/html" title="Heat Template For Testing Ceph" /><published>2014-09-13T16:00:59+00:00</published><updated>2014-09-13T16:00:59+00:00</updated><id>https://cardboardbox.xyz/2014/09/13/heat-template-for-ceph</id><content type="html" xml:base="https://cardboardbox.xyz/2014/09/13/heat-template-for-ceph.html">&lt;p&gt;I put together an OpenStack &lt;a href=&quot;https://wiki.openstack.org/wiki/Heat&quot;&gt;Heat&lt;/a&gt; template for bringing up a small 3-node cluster to test &lt;a href=&quot;http://ceph.com&quot;&gt;Ceph&lt;/a&gt;. Due to the lack of current Heat template documentation, I thought it’d be helpful to share, so you can find it in my &lt;a href=&quot;https://github.com/sjahl/heat-templates/blob/master/templates/ceph-test-cluster.yaml&quot;&gt;github repo&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;With this template, you get three instances with one block device attached to each, prime for installing a small Ceph cluster for testing. The heat template outputs return the IPs of the three instances. When launching the stack, you’ll need to provide a network UUID, the name (not UUID) of an image, and your nova keypair name. The rest of the options have defaults which you can leave, or set to the values of your choice. It’s worth noting that your keypair gets installed into the ec2_user’s home folder, rather than what you might be used to (I’m used to it being installed in the ‘ubuntu’ user’s home folder, as is usually the case in the Ubuntu cloudimg).&lt;/p&gt;
+
+&lt;p&gt;I’ve tested this template with an Icehouse cloud running on a mix of Ubuntu precise and trusty compute hosts. Of course, you need Heat enabled on your cloud to use this.&lt;/p&gt;
+
+&lt;h3 id=&quot;a-few-tips-for-reading-the-template&quot;&gt;A few tips for reading the template&lt;/h3&gt;
+
+&lt;p&gt;There are three main sections to a heat template:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;The &lt;em&gt;parameters&lt;/em&gt; section is where required values are placed.&lt;/p&gt;
+
+    &lt;p&gt;The items in this section are what appear on the “Launch Stack” interface when booting a stack in horizon. Values are either defined statically, or defaults can be given, which auto-fill in the web interface. An item without a value or default produces an empty form field in the horizon interface, and you (or the user) are required to fill the value.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;The &lt;em&gt;resources&lt;/em&gt; section defines the various OpenStack pieces that make up the stack.&lt;/p&gt;
+
+    &lt;p&gt;In the case of this template, we are defining three instances, volumes, attachments, and neutron ports. We can retrieve values from the parameters with the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;get_param&lt;/code&gt; keyword. Other resources in this section can be referenced with the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;get_resource&lt;/code&gt; keyword. This is how I’ve associated volume attachments between their respective volumes and instances.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;The &lt;em&gt;outputs&lt;/em&gt; section is for retrieving values that are displayed once the stack has been created.&lt;/p&gt;
+
+    &lt;p&gt;I’ve used this for retrieving the IPs of the instances that have been launched (see the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;get_attr&lt;/code&gt; keyword) so that I don’t have to go digging through the web interface for them – they’re all aggregated in the Stack Detail Overview in horizon for easy viewing.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;That’s all for now. Feel free to tell me that I’ve done it all wrong… or submit a pull request or something.&lt;/p&gt;</content><author><name>Steve Jahl</name></author><summary type="html">I put together an OpenStack Heat template for bringing up a small 3-node cluster to test Ceph. Due to the lack of current Heat template documentation, I thought it’d be helpful to share, so you can find it in my github repo.</summary></entry></feed>
