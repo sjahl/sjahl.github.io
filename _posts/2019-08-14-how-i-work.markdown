@@ -1,0 +1,66 @@
+---
+layout: post
+title:  "How I work"
+date:   2019-08-14 16:57:43 -0400
+categories: work productivity
+draft: true
+---
+
+I'm always fascinated by looking at the tools that people use for their work, and how they design their working environments. From a technical perspective, it's neat to see the software that people choose, and why they choose it. However, while software is a large part of _how_ work is done, what I find interesting at the moment is the methodology that goes into getting things done. There's plenty of frameworks out there for organizing tasks, but none of them work for every person. Attaining productivity entails of either modifying these frameworks to fit, or designing your own.
+
+I thought it'd be beneficial here to describe how I approach my work day, and how I keep track of what needs to get done. As I'm a programmer myself, this will be focused on a software development work day.
+
+The major component of tracking my time and work is a development journal. I use a simple, old-fashioned notebook. After trying many different software programs that implement different versions of the Getting Things Done framework, I found a paper notebook to be most effective. The paper notebook works for me, because:
+
+- I no longer have to worry about syncing across devices
+- I no longer have to worry about cross-platform app availability
+- I am less distracted by the Internet and remember more of my tasks when I physically write things down
+- My notebook does not have a hard drive that can fail, or a battery that runs out
+
+A good task tracking system is extremely valuable. I believe that software developers need a system in place where they can write down thoughts and TODO items without much interference. I often think of things when I'm in the middle of working on something, and being able to efficiently clear those things out of my mind is essential to keeping my focus. I’ve found that a physical notebook handles this nicely.
+
+The format that I use for taking notes is based on [Bullet Journal](https://bulletjournal.com). The indexing and note taking rules bring some of the convenience of software systems, and put them in my notebook. If I need it to do something custom, I can just draw it out with my pen. No waiting for new software features!
+
+## Starting
+
+Beginning my work day is historically what I’ve found the most difficult. The act of choosing something to start on and just doing it is where I easily find myself lost. I'm extremely jealous of people that seem to show up at work, sit down at their desk, and start coding. For me, that motivation doesn't come that easily.
+
+Forming a routine has been the most helpful technique. The routine kind of has a way of priming my brain and attitude for work. Starting the same way each day removes some of the decision paralysis that comes with trying to choose what to work on.
+
+I start each day by reviewing my development journal. I note any tasks that must be done today, remove any tasks that are no longer needed, and add any new tasks that come to mind. This review process helps me plot out my work for the day, and leaves me with a list of work to choose from.
+
+Sometimes, even after I have a list of work to do, I still have trouble actually _starting_. Throughout my career, I've fought with burnout, lack of a clear direction from management, or have just been simply uninterested in what I'm working on. Most of these types of problems make any task in my project seem like an impassable object (_I'm afraid of opening my text editor for fear of what it might bring_). The good news is that these tasks are rarely insurmountable, and I've found the following techniques helpful when I have trouble picking up the first task.
+
+#### Leave a failing unit test the day before
+
+Towards the end of my work day, if I have the chance to leave a failing test case open, I do it. I think this does two things: 1) it helps instill a healthy attitude around not working long hours until absolutely everything is finished, and 2) I find it very easy to snap back into the swing of things when I have a test telling me exactly what to go work on. This technique helps establish a good flow, as when I navigate to that failing test case, it makes me feel like I'm picking up right where I left off.
+
+#### Organize development work into categories and don't context switch
+
+I work on all parts of my application stack, from operating the servers, to the javascript running in my end-users browsers. While this sounds like a lot, the work can easily be divided up into a few categories. To prevent context-switching costs, I try to pick one of the categories to work on during a given day, and stick with it. For example, I'll designate Tuesday as a "front-end design day", and I'll focus on HTML and CSS. I'm much more productive at this when I'm not worrying about how much RAM my database server has.
+
+This separation of topics also has the nice effect of changing up the work that I'm doing, which is helpful in reducing the feeling of monotony. I also find it beneficial, as I have conceptual "buckets" to place tasks into in the future. If I notice a CSS problem while I'm developing the back-end, I can note the problem to be taken care of the next time I'm working on the front-end, and then
+
+## Working
+
+After I’ve gotten started, maintaining momentum is my primary focus. As I’m working, I’m typically faced with all forms of interruptions. Keeping my momentum involves careful management of distractions, and taking notes on things that I need to follow up on later.
+
+External distractions generally come in the form of meetings, email, and chat messages. For meetings, I make sure that the time is noted during my start-of-day notebook review. This allows me to plan to work on tasks that can be completed in the chunks of time that I have before and after the meeting. Email and Chat are silenced while I’m focusing on a task. Instead, I check these at certain intervals (typically hourly).
+
+Internal distractions are the self-inflicted ones. These include the desire to look at Twitter, picking which song to listen to on my headphones, or trying to fix unrelated bugs as I come across them. I find that by isolating my editor and terminals in their own workspace away from other software, I can limit some of the temptation to stray. I also find that listening to [white noise](https://noisli.com) removes some of the distractions of music services. While I’m working, there’s typically a constant stream of thoughts (feature ideas, bugs, and other code changes). While it’s good to have these thoughts, if they’re unrelated to my current task, I write them down in my notebook to push them out of my mind and continue with what I was working on.
+
+I’ll generally iterate through my tasks on this fashion until they’re complete. If I find myself with spare time, I’ll generally do research, catch up on reading blogs, or I’ll try to learn something new about something I’m currently working on (new framework features, language libraries, etc). Gaps like this are also s great time to tackle smaller software maintenance tasks.
+
+## Ending
+
+Ending the day is, in my opinion, the most important part. I try to keep a consistent time of day to stop working. This consistency helps me plan more efficiently, and helps keep me from getting lost in my tasks (“Oh no! I’ve been working for 13 hours!”). Often, I’ll set an alarm on my computer for about twenty minutes before I intend to leave work for the day.
+
+When the alarm goes off, I wrap up what I’m working on (or leave it in an otherwise resumable state for the next day), and review my notebook. The end-of-day review is quite similar to the start-of-day review. The goals are to:
+
+- Cancel any tasks that are no longer pertinent
+- Designate tasks for tomorrow or someday later in the future
+- Make any notes that will help me pick up work on the next day
+
+Once the review is done, it’s time to hang up. I generally try to completely disconnect from work for at least an hour after I leave. I avoid looking at work email or chat on the commute home. I avoid working after hours if at all possible. I’ve generally found that if I spend the evening reading, listening to podcasts, watching a TV show, and then getting a full nights sleep, I’m far more ready for work when I arrive the next day. Relax and recharge.
+
+That’s all for now. I’m hoping that this inspires some others to share how they make themselves productive. The personal tweaks that people make to productivity frameworks have always interested me, so I’d love to hear about them from others!
